@@ -10,7 +10,7 @@ const car = new Car(road.getLaneCenter(1), 100, 30, 50);//set car axis and dimen
 animate();
 
 function animate(){
-    car.update();
+    car.update(road.borders); //car should know the road border locations
     canvas.height = window.innerHeight; //spans  entire window, car moves x,y adjusts with new canvas
     ctx.save();
     //make illusion camera is following car,acc road moving
